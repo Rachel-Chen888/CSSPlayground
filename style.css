@@ -1,0 +1,28 @@
+/* External CSS 
+Need to connect to the HTML file */ 
+.title
+{
+	font-size: 40px; 
+	color: brown; 
+}
+
+p 
+{ 
+	font-size: 20px; 
+	color: red; 
+} 
+
+
+/* can use inspect in dev tools to pick a color you want 
+can also try rgba and the a means opacity so 0.5 is half*/ 
+.hello
+{
+	/* background-color: #efefef; */ 
+	height: 100%; 
+	background-image:url(turkeyemoji.png); 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: cover; 
+	background-attachment: fixed; 
+}
+	

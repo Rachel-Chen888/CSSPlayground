@@ -4,7 +4,11 @@
 	<!-- We can write CSS inline, or internal or external CSS --> 
 	<title> Practice CSS </title> 
 	
-	<!-- Internal CSS--> 
+	<!-- To link to external CSS 
+	type=text/css is optional --> 
+	<link rel="stylesheet" href="style.css" type="text/css"> 
+	
+	<!-- Internal CSS
 	<style> 
 		p {
 			font-size: 40px; 
@@ -13,6 +17,7 @@
 		}
 	
 	</style> 
+	-->
 	
 	
 </head> 
@@ -22,9 +27,18 @@
 	<!-- Inline CSS 
 	<p style="font-size: 40px">Inline CSS</p>
 	--> 
-	
+	<!-- 
 	<p> Internal CSS applied here </p>
 	<p> and here too :) </p> 
+	--> 
+	
+	<p class="title"> Testing external CSS </p> 
+	
+		<div class="hello">
+			<h1>Hello Worlddddd </h1> 
+			<p>Testing some more external CSS </p> 
+			<button type="submit">submit</button> 
+		</div> 
 	
 	
 	</body> 
