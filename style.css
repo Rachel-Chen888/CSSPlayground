@@ -71,5 +71,31 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	font-family: cursive; 
 	
 	
+	/* Add 40 px to each side 
+	margin adds space outside division, padding adds space inside division
+	can also do margin-left or do it all in one line  
+	margin: 40px; 
+	padding: 80px; 
+	*/ 
+	
+	/* order: top right bottom left  
+	margin: 100px 200px 300px 10px; 
+	*/ 
+	
+	/* order: first ine is top/bottom, second one is left/right  
+	margin: 100px 200px; 
+	*/ 
+	
+	/* order: first one: top, second one: left/right, third one: bottom */ 
+	margin: 10px 200px 100px; 
+	
+	
+	
+	
 }
+
+ul{ 
+	/* with none, u can remove bullet points */ 
+	list-style: square; 
+} 
 	
