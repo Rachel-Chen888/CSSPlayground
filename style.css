@@ -17,6 +17,10 @@ p
 can also try rgba and the a means opacity so 0.5 is half*/ 
 .hello
 {
+	
+	
+	
+	
 	/* background-color: #efefef; */ 
 	height: 100%; 
 	background-image:url(turkeyemoji.png); 
@@ -38,5 +42,34 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	border-top-left-radius: 30px; 
 	border-top-right-radius: 20px; 
 	border-bottom-left-radius: 10px; 
+	
+	
+	cursor: pointer; 
+	
+	/* move everything to right
+	float: right; */ 
+
+	/* stuff in hello disappears  
+	display: none; 	*/ 
+	
+	/* display: removes elem/takes no space 
+	visibility: keep elem in layout, but invisible 	 
+	visibility: hidden; 
+	*/ 
+	
+	
+	/* u can have width as % and min-width as px to make it look good  
+	width: 50%; 
+	min-width: 500px; 
+	*/ 
+	
+	/* increase space between words vertically */ 
+	line-height: 30px; 
+	font-size: 20px; 
+	font-style: italic; 
+	/* can use google font for more families */ 
+	font-family: cursive; 
+	
+	
 }
 	
