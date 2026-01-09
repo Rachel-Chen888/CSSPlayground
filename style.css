@@ -98,4 +98,28 @@ ul{
 	/* with none, u can remove bullet points */ 
 	list-style: square; 
 } 
+
+
+input { 
+	/* outline: none; */ 
+	outline-color: red; 
 	
+} 
+	
+
+/* need hi p instead of just hi or else the font-size won't apply 
+since we already change it in p{} 
+and since in html file, we have <div...hi> <p> ... </p> </div> 
+the p will get applied since it overrides the inherited 10px font from div 
+so we need to be more specific with hi p to get the font size to change */ 
+.hi p { 
+	text-align: center; 
+	font-size: 10px; 
+	text-decoration: underline; 
+	text-transform: uppercase; 
+	letter-spacing: 18px; 
+	word-spacing: 30px; 
+	/* [horizontal offset] [vertical offset] [blur radius] [color] */ 
+	text-shadow: 2px 2px 5px black; 
+}
+ 
