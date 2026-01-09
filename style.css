@@ -24,5 +24,19 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	background-position: center; 
 	background-size: cover; 
 	background-attachment: fixed; 
+	
+	
+	/* borders :) 
+	border-style: dashed; 
+	border-width: 2px; 
+	border-color: red; 
+	*/ 
+	
+	/* Can merge to one line, can also do border-top or something */ 
+	border: dashed 5px blue; 
+	/*curves the corner*/ 
+	border-top-left-radius: 30px; 
+	border-top-right-radius: 20px; 
+	border-bottom-left-radius: 10px; 
 }
 	
