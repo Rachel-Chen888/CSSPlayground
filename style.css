@@ -122,4 +122,60 @@ so we need to be more specific with hi p to get the font size to change */
 	/* [horizontal offset] [vertical offset] [blur radius] [color] */ 
 	text-shadow: 2px 2px 5px black; 
 }
- 
+
+/* To refer to child class 
+.hi .inner-hi p {} 
+
+this is different then .inner-hi p {} since...
+ this targets every .inner-hi class, not only the one in the parent hi class 
+*/ 
+
+
+/* 
+we have pseudoclass (define special dynamic state of elem) like...
+- active, triggers with mouse click/press 
+- focus, triggers when elem has keyboard/input focus
+- hover, triggers when mouse over elem 
+- first-child, selects if elem first child of parent 
+- last-child,  selects if elem last child of parent 
+*/ 
+
+p:hover 
+{
+	color: orange; 
+} 
+
+
+/* 
+*{} is the universal selector that selects every elem on this page 
+*/ 
+
+.positionTest {
+	width: 600px; 
+	height: 150px; 
+	background: #9ec3ff; 
+	margin: 100px auto; 
+}
+
+.inner-position {
+	width: 200px; 
+	height: 100px; 
+	background: grey; 
+	/* moves it to absolute position based on entire webpage 
+	position: absolute; 
+	top: 10px; 
+	left:10px; 
+	*/ 
+	
+	/* moves it to relative position based on shifting */ 
+	position: relative; 
+	top: 10px; 
+	left:10px;  
+} 
+
+
+.inner-position p {
+	color: #fff; 
+	font-size: 24px; 
+} 
+
