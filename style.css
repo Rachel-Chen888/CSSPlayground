@@ -1,13 +1,12 @@
 /* External CSS 
 Need to connect to the HTML file */ 
-.title
-{
+.title {
 	font-size: 40px; 
 	color: brown; 
 }
 
-p 
-{ 
+
+p { 
 	font-size: 20px; 
 	color: red; 
 } 
@@ -15,12 +14,7 @@ p
 
 /* can use inspect in dev tools to pick a color you want 
 can also try rgba and the a means opacity so 0.5 is half*/ 
-.hello
-{
-	
-	
-	
-	
+.hello {
 	/* background-color: #efefef; */ 
 	height: 100%; 
 	background-image:url(turkeyemoji.png); 
@@ -28,7 +22,6 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	background-position: center; 
 	background-size: cover; 
 	background-attachment: fixed; 
-	
 	
 	/* borders :) 
 	border-style: dashed; 
@@ -43,7 +36,6 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	border-top-right-radius: 20px; 
 	border-bottom-left-radius: 10px; 
 	
-	
 	cursor: pointer; 
 	
 	/* move everything to right
@@ -57,7 +49,6 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	visibility: hidden; 
 	*/ 
 	
-	
 	/* u can have width as % and min-width as px to make it look good  
 	width: 50%; 
 	min-width: 500px; 
@@ -69,7 +60,6 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	font-style: italic; 
 	/* can use google font for more families */ 
 	font-family: cursive; 
-	
 	
 	/* Add 40 px to each side 
 	margin adds space outside division, padding adds space inside division
@@ -87,14 +77,11 @@ can also try rgba and the a means opacity so 0.5 is half*/
 	*/ 
 	
 	/* order: first one: top, second one: left/right, third one: bottom */ 
-	margin: 10px 200px 100px; 
-	
-	
-	
-	
+	margin: 10px 200px 100px; 	
 }
 
-ul{ 
+
+ul { 
 	/* with none, u can remove bullet points */ 
 	list-style: square; 
 } 
@@ -103,7 +90,6 @@ ul{
 input { 
 	/* outline: none; */ 
 	outline-color: red; 
-	
 } 
 	
 
@@ -123,6 +109,7 @@ so we need to be more specific with hi p to get the font size to change */
 	text-shadow: 2px 2px 5px black; 
 }
 
+
 /* To refer to child class 
 .hi .inner-hi p {} 
 
@@ -140,8 +127,7 @@ we have pseudoclass (define special dynamic state of elem) like...
 - last-child,  selects if elem last child of parent 
 */ 
 
-p:hover 
-{
+p:hover {
 	color: orange; 
 } 
 
@@ -150,12 +136,14 @@ p:hover
 *{} is the universal selector that selects every elem on this page 
 */ 
 
+
 .positionTest {
 	width: 600px; 
 	height: 150px; 
 	background: #9ec3ff; 
-	margin: 100px auto; 
+	margin: 100px auto;  
 }
+
 
 .inner-position {
 	width: 200px; 
@@ -179,3 +167,73 @@ p:hover
 	font-size: 24px; 
 } 
 
+
+/* double colon is pseudo elem, not pseudo-class 
+::after creates the elem after the content in this div */ 
+.positionTest::after{
+	content: ''; /* needed for after to exist */ 
+	width: 100px; 
+	height: 50px; 
+	background: blue; 
+	
+	/* without position: absolute, it behaves like inline elem 
+	and since content: '', taking it out would make the recatnge 'invisible' */ 
+	position: absolute; 
+} 
+
+
+/* double colon is pseudo elem, not pseudo-class 
+::after creates the elem after the content in this div */ 
+.positionTest::before{
+	content: ''; /* needed for after to exist */ 
+	width: 100px; 
+	height: 50px; 
+	background: orange; 
+	position: absolute; 
+} 
+
+
+.demo { 
+	width: 700px; 
+	height: 700px; 
+	background: black; 
+	margin: 50px auto; 
+	
+	/* instead of in one col, the "sticky notes" are now in one row */ 
+	display: flex; 
+}
+
+
+.demo-inner {
+	width: 150px; 
+	height: 150px; 
+	background: orange; 
+} 
+
+
+.demo-inner p {
+  margin: 0;
+  font-size: 24px; 
+  color: #fff; 
+}
+
+
+/* Select .demo-inner if it is the first child of its parent */ 
+.demo-inner:nth-child(1){ 
+	background: red; 
+} 
+
+/* Select .demo-inner if it is the second child of its parent */ 
+.demo-inner:nth-child(2){ 
+	background: orange; 
+} 
+
+/* Select .demo-inner if it is the third child of its parent */ 
+.demo-inner:nth-child(3){ 
+	background: yellow; 
+} 
+
+/* Select .demo-inner if it is the fourth child of its parent */ 
+.demo-inner:nth-child(4){ 
+	background: green; 
+} 
