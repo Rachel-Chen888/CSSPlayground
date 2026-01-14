@@ -205,9 +205,12 @@ p:hover {
 
 
 .demo-inner {
-	width: 150px; 
+	/* 
+	having this will make flex-basis 50% look smaller than half 
+	since its trying to fit the 50% in the avaliable space 
+	width: 150px; */ 
 	height: 150px; 
-	background: orange; 
+	background: orange;
 } 
 
 
@@ -221,19 +224,80 @@ p:hover {
 /* Select .demo-inner if it is the first child of its parent */ 
 .demo-inner:nth-child(1){ 
 	background: red; 
+	flex-basis: 15%; 
 } 
 
 /* Select .demo-inner if it is the second child of its parent */ 
 .demo-inner:nth-child(2){ 
-	background: orange; 
+	background: orange;  
+	flex-basis: 20%;
 } 
 
 /* Select .demo-inner if it is the third child of its parent */ 
 .demo-inner:nth-child(3){ 
-	background: yellow; 
+	background: yellow;  
+	flex-basis: 40%;
 } 
 
 /* Select .demo-inner if it is the fourth child of its parent */ 
 .demo-inner:nth-child(4){ 
-	background: green; 
+	background: green;  
+	/* flex: 1 covers all the avaliable space in the row */ 
+	flex: 1;
+} 
+
+
+.demo2 { 
+	width: 700px; 
+	height: 700px; 
+	background: black; 
+	margin: 50px auto; 
+	
+	/* instead of in one col, the "sticky notes" are now in one row */ 
+	display: flex; 
+}
+
+.demo-inner2 { 
+	height: 150px; 
+	background: orange; 
+	flex-basis: 15%; 
+} 
+
+
+.demo-inner2 p {
+	margin: 0;
+	font-size: 24px; 
+	color: #fff; 
+}
+
+
+/* Select .demo-inner if it is the first child of its parent */ 
+.demo-inner2:nth-child(1){ 
+	background: red; 
+	
+	/* Explaination of how much space it takes: 
+	parent class has flex-basis: 15% each so total take up 60% 
+	free space is 40% (100-60) 
+	flex-grow is a ratio, meaning first child is 2 while others are 1 
+	total 5 grow units 
+	child1 gets 2/5 of the free space of 40% 
+	the others only get 1/5 
+	so child1 has width flex-basis+2/5 
+	other child has width flex-basis+1/5 */ 
+	flex-grow: 2; 	
+} 
+
+/* Select .demo-inner if it is the second child of its parent */ 
+.demo-inner2:nth-child(2){ 
+	background: orange;   
+} 
+
+/* Select .demo-inner if it is the third child of its parent */ 
+.demo-inner2:nth-child(3){ 
+	background: yellow;   
+} 
+
+/* Select .demo-inner if it is the fourth child of its parent */ 
+.demo-inner2:nth-child(4){ 
+	background: green;   
 } 
