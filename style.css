@@ -278,12 +278,9 @@ p:hover {
 	/* Explaination of how much space it takes: 
 	parent class has flex-basis: 15% each so total take up 60% 
 	free space is 40% (100-60) 
-	flex-grow is a ratio, meaning first child is 2 while others are 1 
-	total 5 grow units 
-	child1 gets 2/5 of the free space of 40% 
-	the others only get 1/5 
-	so child1 has width flex-basis+2/5 
-	other child has width flex-basis+1/5 */ 
+	flex-grow is a ratio, meaning first child is 2 while others are 0 by default
+	child1 gets ALL of the free space of 40% 
+	since the others have ratio of 0  */ 
 	flex-grow: 2; 	
 } 
 
@@ -300,4 +297,67 @@ p:hover {
 /* Select .demo-inner if it is the fourth child of its parent */ 
 .demo-inner2:nth-child(4){ 
 	background: green;   
+} 
+
+
+
+
+
+.demo3 { 
+	width: 700px; 
+	height: 700px; 
+	background: black; 
+	margin: 50px auto; 
+	
+	/* instead of in one col, the "sticky notes" are now in one row */ 
+	display: flex; 
+}
+
+.demo-inner3 { 
+	height: 150px; 
+	background: orange;  
+	/* split each into [175px][175px][175px][175px] (700/4) */ 
+	flex-basis: 25%; 
+	/* padding causes 20px extra left and right 
+	so each take up 215px (215*4 = 860) 
+	and 860px > 700px so flex-shrink finds how to shrink stuff */ 
+	padding: 20px; 
+} 
+
+
+.demo-inner3 p {
+	margin: 0;
+	font-size: 24px; 
+	color: #fff; 
+}
+
+
+/* Select .demo-inner if it is the first child of its parent */ 
+.demo-inner3:nth-child(1){ 
+	background: red;  
+	/* flex-grow for extra space and flex-shrink for not enough space */ 
+	/* ratio of 4 for child1 and 1 for child2-4 
+	meaning total srhink units = 7 and child1 gets 4/7 
+	so with 160px overflow (860-700) 
+	child1 gets 4/7*160 smalled so 215 - (160*4/7) = 123.57px 
+	and other children get 215-22.86 = 192.14px of space it takes up total */ 
+	flex-shrink: 4; 
+} 
+
+/* Select .demo-inner if it is the second child of its parent */ 
+.demo-inner3:nth-child(2){ 
+	background: orange;
+	flex-shrink: 1; 	
+} 
+
+/* Select .demo-inner if it is the third child of its parent */ 
+.demo-inner3:nth-child(3){ 
+	background: yellow;   
+	flex-shrink: 1; 
+} 
+
+/* Select .demo-inner if it is the fourth child of its parent */ 
+.demo-inner3:nth-child(4){ 
+	background: green; 
+	flex-shrink: 1;   
 } 
