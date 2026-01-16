@@ -361,3 +361,71 @@ p:hover {
 	background: green; 
 	flex-shrink: 1;   
 } 
+
+
+.demo4 { 
+	width: 700px; 
+	height: 700px; 
+	background: black; 
+	margin: 50px auto; 
+	
+	/* instead of in one col, the "sticky notes" are now in one row */ 
+	display: flex;
+	
+	/* vertically centered 
+	default is align-items: stretch; */ 
+	align-items: center; 
+	/* flex-start puts it on top, flex-end puts it on bottom */ 
+	
+	/* horiz centering */ 
+	justify-content: center; 
+	/* flex-start puts it on left, flex-end puts it on right */ 
+	
+	/* equal space between all col   
+	justify-content: space-between; */ 
+	
+	/* equal space between all columns but also will be space at start and end */ 
+	justify-content:space-around; 
+	
+	/* this is the default, put the sticky notes into a row
+	if use row reverse, will go from 4-1 but the 1 touches the right side 
+	flex-direction: row; */  
+	
+	/* puts the sticky notes into a col 
+	if use column reverse, will go from 4-1 but the 1 touches the bottom side */ 
+	flex-direction: column; 
+}
+
+.demo-inner4 { 
+	height: 150px; 
+	background: orange;   
+	width: 150px; 
+} 
+
+
+.demo-inner4 p {
+	margin: 0;
+	font-size: 24px; 
+	color: #fff; 
+}
+
+
+/* Select .demo-inner if it is the first child of its parent */ 
+.demo-inner4:nth-child(1){ 
+	background: red;   
+} 
+
+/* Select .demo-inner if it is the second child of its parent */ 
+.demo-inner4:nth-child(2){ 
+	background: orange; 
+} 
+
+/* Select .demo-inner if it is the third child of its parent */ 
+.demo-inner4:nth-child(3){ 
+	background: yellow;   
+} 
+
+/* Select .demo-inner if it is the fourth child of its parent */ 
+.demo-inner4:nth-child(4){ 
+	background: green;  
+} 
