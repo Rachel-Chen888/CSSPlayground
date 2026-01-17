@@ -257,6 +257,7 @@ p:hover {
 	display: flex; 
 }
 
+
 .demo-inner2 { 
 	height: 150px; 
 	background: orange; 
@@ -300,9 +301,6 @@ p:hover {
 } 
 
 
-
-
-
 .demo3 { 
 	width: 700px; 
 	height: 700px; 
@@ -312,6 +310,7 @@ p:hover {
 	/* instead of in one col, the "sticky notes" are now in one row */ 
 	display: flex; 
 }
+
 
 .demo-inner3 { 
 	height: 150px; 
@@ -396,6 +395,7 @@ p:hover {
 	flex-direction: column; 
 }
 
+
 .demo-inner4 { 
 	height: 150px; 
 	background: orange;   
@@ -429,3 +429,110 @@ p:hover {
 .demo-inner4:nth-child(4){ 
 	background: green;  
 } 
+
+
+.demo5 { 
+	width: 700px; 
+	height: 700px; 
+	background: black; 
+	margin: 50px auto; 
+	
+	/* instead of in one col, the "sticky notes" are now in one row */ 
+	display: flex; 
+	
+	/* allows for 150 px with since coming in 2 lines 
+	wrap reverse reverses location and numbering */ 
+	flex-wrap: wrap-reverse; 
+}
+
+
+.demo-inner5 { 
+	height: 150px; 
+	background: orange;   
+	
+	/* its actually smaller (without flexwrap) because 8 in one row and only 700 total 
+	so not enough space */ 
+	width: 150px; 
+} 
+
+
+.demo-inner5 p {
+	margin: 0;
+	font-size: 24px; 
+	color: #fff; 
+}
+
+
+/* Select .demo-inner if it is the first child of its parent */ 
+.demo-inner5:nth-child(1){ 
+	background: red;   
+} 
+
+/* Select .demo-inner if it is the second child of its parent */ 
+.demo-inner5:nth-child(2){ 
+	background: orange; 
+} 
+
+/* Select .demo-inner if it is the third child of its parent */ 
+.demo-inner5:nth-child(3){ 
+	background: yellow;   
+} 
+
+/* Select .demo-inner if it is the fourth child of its parent */ 
+.demo-inner5:nth-child(4){ 
+	background: green;  
+} 
+
+/* Select .demo-inner if it is the fifth child of its parent */ 
+.demo-inner5:nth-child(5){ 
+	background: blue;   
+} 
+
+/* Select .demo-inner if it is the sixth child of its parent */ 
+.demo-inner5:nth-child(6){ 
+	background: indigo; 
+} 
+
+/* Select .demo-inner if it is the seventh child of its parent */ 
+.demo-inner5:nth-child(7){ 
+	background: violet;   
+} 
+
+/* Select .demo-inner if it is the eight child of its parent */ 
+.demo-inner5:nth-child(8){ 
+	background: pink;  
+} 
+
+
+.lastTest { 
+	width: 600px; 
+	height: 600px; 
+	background: black; 
+	margin: 100px auto;  
+	
+}
+
+
+.lastTest-inner { 
+	height: 150px; 
+	background: orange;   
+	
+	/* its actually smaller (without flexwrap) because 8 in one row and only 700 total 
+	so not enough space */ 
+	width: 150px; 
+	
+	/* change from orange to blue when hover has transition */ 
+	transition: 1s; 
+} 
+
+
+.lastTest-inner:hover {
+	background: blue; 
+} 
+
+
+.lastTest-inner p {
+	margin: 0;
+	font-size: 24px; 
+	color: #fff; 
+}
